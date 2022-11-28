@@ -19,7 +19,6 @@ To learn more about these concepts in NVIDIA Merlin, see for example
 in this repository or example notebooks in
 [Merlin Models](https://github.com/NVIDIA-Merlin/models/tree/main/examples).
 
-
 ## Running the Example Notebook
 
 You can run the example notebook with the latest stable
@@ -35,11 +34,13 @@ in the AWS documentation.
 After you configure basic AWS settings, you can mount your AWS credentials
 by adding `-v $HOME/.aws:/root/.aws` to your Docker command in Step 1 of
 [Running the Example Notebooks](../README.md#running-the-example-notebooks):
+
 ```shell
 docker run --gpus all --rm -it \
   -p 8888:8888 -p 8797:8787 -p 8796:8786 --ipc=host \
   -v $HOME/.aws:/root/.aws \
   <docker container> /bin/bash
 ```
+
 and follow the remaining steps in
 [Running the Example Notebooks](../README.md#running-the-example-notebooks).

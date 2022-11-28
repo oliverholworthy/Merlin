@@ -1,11 +1,9 @@
 ---
-
 name: "\U0001F4CB (Internal) Release Checklist"
 about: Prepare a new Merlin release
 title: "[REL]"
 labels: "release"
-assignees: ''
-
+assignees: ""
 ---
 
 # Release Checklist
@@ -111,4 +109,3 @@ assignees: ''
 
 - [ ] Pulse
 - [ ] NGC
-

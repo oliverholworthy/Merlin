@@ -48,34 +48,34 @@ Check that yours edits formatted correctly and read well.
 
 1. Start Python in a container:
 
-  ```shell
-  docker run --rm -it -v $(pwd):/workspace -w /workspace --network=host \
-    python:3.8-buster@sha256:ccc66c06817c2e5b7ecd40db1c4305dea3cd9e48ec29151a593e0dbd76af365e bash
-  ```
+```shell
+docker run --rm -it -v $(pwd):/workspace -w /workspace --network=host \
+  python:3.8-buster@sha256:ccc66c06817c2e5b7ecd40db1c4305dea3cd9e48ec29151a593e0dbd76af365e bash
+```
 
 1. Install dependencies in the container:
 
-  ```shell
-  python -m pip install pip==22.0.4 setuptools==59.4.0 wheel
-  python -m pip install -r docs/requirements-doc.txt
-  ```
+```shell
+python -m pip install pip==22.0.4 setuptools==59.4.0 wheel
+python -m pip install -r docs/requirements-doc.txt
+```
 
-  > Pip is frozen at 22.0.4 because that version is specified
-  > in `test_extractor.py`.  Update the test if you update
-  > the version here and in `requirements-doc.txt`.
+> Pip is frozen at 22.0.4 because that version is specified
+> in `test_extractor.py`. Update the test if you update
+> the version here and in `requirements-doc.txt`.
 
 1. Run the tests:
 
-  ```shell
-  coverage run -m pytest -v docs && coverage report -m
-  ```
+```shell
+coverage run -m pytest -v docs && coverage report -m
+```
 
 ## Handy notes
 
 ### Remove a field from the JSON
 
 In the following case, the `cuparse` key is a mistake and should have been
-`cusparse`.  The following command removes the mistake from the JSON:
+`cusparse`. The following command removes the mistake from the JSON:
 
 ```shell
 jq 'walk(if type == "object" then del(.cuparse) else . end)' < data.json > x
@@ -86,7 +86,7 @@ jq 'walk(if type == "object" then del(.cuparse) else . end)' < data.json > x
 ```shell
 jq --sort-keys 'walk(if type == "object" and has("base_container") then
     . += {"distributed_embeddings":"Not applicable"}
-  else . 
+  else .
   end)' < docs/data.json > x
 
 # Always check your work.
@@ -109,9 +109,9 @@ jq '. | map_values(keys) ' < docs/source/data.json
 
 Documenting the support matrix is a three part process:
 
-* Extract the data from the containers.
-* Convert the data into RST.
-* Build the docs, as normal.
+- Extract the data from the containers.
+- Convert the data into RST.
+- Build the docs, as normal.
 
 The first part is handled by the `docs/extractor.py` script.
 Unless you have all the containers downloaded, it's best to run

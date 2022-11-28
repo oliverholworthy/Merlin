@@ -3,8 +3,7 @@ name: "❓ Questions & Help"
 about: Ask a general question about Merlin
 title: "[QST]"
 labels: "question"
-assignees: ''
-
+assignees: ""
 ---
 
 # ❓ Questions & Help

@@ -9,7 +9,7 @@ We demonstrate how to scale NVTabular, as well as:
 - Train recommender system models with HugeCTR using multiple GPUs.
 - Inference with the Triton Inference Server and Merlin Models for TensorFlow or HugeCTR.
 
-Our recommendation is to use our latest stable [Merlin containers](https://catalog.ngc.nvidia.com/containers?filters=&orderBy=dateModifiedDESC&query=merlin) for the examples. Each notebook provides the required container.  
+Our recommendation is to use our latest stable [Merlin containers](https://catalog.ngc.nvidia.com/containers?filters=&orderBy=dateModifiedDESC&query=merlin) for the examples. Each notebook provides the required container.
 
 Explore the following notebooks:
 

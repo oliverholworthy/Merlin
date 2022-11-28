@@ -3,8 +3,7 @@ name: "\U0001F680 Feature request"
 about: Submit a proposal/request for a new Merlin feature
 title: "[FEA]"
 labels: "enhancement"
-assignees: ''
-
+assignees: ""
 ---
 
 # 🚀 Feature request
